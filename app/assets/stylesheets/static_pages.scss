@@ -1,3 +1,74 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+h1 {
+	font-family: Futura, sans-serif;
+	color: #3498db;
+	text-align: center;
+}
+
+body {
+	background-color: #E4F1FE;
+	margin-bottom: 225px;
+}
+
+.page-heading {
+	margin-top: 60px;
+}
+
+.navbar-inverse {
+	background-color: #3498db;
+	float: right;
+	border-bottom: 1px white solid;
+}
+
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+.navbar-collapse ul {
+	float: right;
+}
+
+.navbar { 
+	background-color: #3498db;
+}
+
+.footer-links,
+.footer-contact {
+	list-style: none;
+}
+
+.footer-links li a,
+.footer-contact li {
+	color: white; 
+}
+
+.footer-contact li {
+	padding-right: 20px;
+}
+
+footer p {
+	padding-top: 30px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 225px;
+	border-top: 1px solid white;
+	background-color: #3498db;
+}
+
+.navbar-brand {
+	text-shadow: 2px 0 darkblue;
+	font-size: 2em;
+}
