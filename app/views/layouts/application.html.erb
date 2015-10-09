@@ -2,14 +2,13 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nameofapp</title>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%=stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track'=> true %>
+     <%=javascript_include_tag 'application', 'data-turbolinks-track'=> true %>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <%=javascript_include_tag 'application', 'data-turbolinks-track'=> true %>
-        <%=csrf_meta_tags %>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <%=csrf_meta_tags %>
 </head>
 
 <body>
@@ -45,14 +44,14 @@
         <!-- end nav container-->
     </nav>
     <!-- navbar ends here-->
-    <div class="container">
+    <section class="container">
     	<div class="row">
     		<div class="col-md-12">
     			<h1 class="page-heading">Welcome to Gadget Mart</h1>
     			<h3 class="text-center">Your source for the latest computers, cell phones, and tablets.</h3>
 			</div>
 		</div>
-	</div>
+	</section>
 
     <footer class="footer">
             <div class="container">
