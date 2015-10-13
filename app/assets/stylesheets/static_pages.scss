@@ -5,6 +5,7 @@
 html {
 	position: relative;
 	min-height: 100%;
+	box-sizing: border-box;
 }
 
 h1 {
@@ -20,6 +21,7 @@ body {
 
 .page-heading {
 	margin-top: 60px;
+	padding-bottom: 20px;
 }
 
 .navbar-inverse {
