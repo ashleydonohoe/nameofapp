@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-sm-6">
+			<p id="notice"><%= notice %></p>
+
+			<p>
+			  <strong>Name:</strong>
+			  <%= @product.name %>
+			</p>
+
+			<p>
+			  <strong>Description:</strong><br>
+			  <%= @product.description %>
+			</p>
+		</div>
+		<div class="col-md-6 col-sm-6">
+			<p>
+			  <strong>Image:</strong> <br><!--Want product image to appear to right of name/description on small and larger sized screens-->
+			  <%= @product.image_url %>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<%= link_to 'Edit', edit_product_path(@product) %> |
+			<%= link_to 'Back', products_path %>
+		</div>
+	</div>
+</div>
