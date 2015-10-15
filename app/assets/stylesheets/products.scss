@@ -26,5 +26,12 @@ tbody tr td {
 	.col-sm-3,
 	.col-md-3 {
 		margin: 10px;
+	text-align: left !important;
 }
+}
+
+@media only screen and (max-width: 768px ) {
+	.move-right {
+	text-align: right;
+	}
 }

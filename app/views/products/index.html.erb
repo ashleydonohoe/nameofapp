@@ -30,11 +30,11 @@
       <div class="col-md-3 col-sm-3">
         <%= product.image_url %>
       </div>
-      <div class="col-md-3 col-sm-3">
-        <%= product.colour %><br>
+      <div class="col-md-3 col-sm-3 move-right">
+        <p><%= product.colour %><br>
         <%= link_to 'Show', product %>
         <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div>
     </div>
   <% end %>
