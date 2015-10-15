@@ -19,19 +19,17 @@ tbody tr td {
 	border-bottom: 1px solid black;
 }
 
-@media only screen and (max-device-width: 480px) {
-	.grid-header {
-		display: none;
-	}
-	.col-sm-3,
-	.col-md-3 {
-		margin: 10px;
-	text-align: left !important;
-}
+.btn.btn-primary a {
+	color: white !important;
 }
 
-@media only screen and (max-width: 768px ) {
-	.move-right {
-	text-align: right;
+.btn.btn-primary {
+	margin-bottom: 10px;
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+	.page-heading {
+		padding-top: 50px;
 	}
+
 }
