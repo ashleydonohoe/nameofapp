@@ -12,3 +12,19 @@ tbody tr td {
 	background-color: white;
 	padding: 10px;
 }
+
+.product-row {
+	margin-bottom: 30px;
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+
+@media only screen and (max-device-width: 480px) {
+	.grid-header {
+		display: none;
+	}
+	.col-sm-3,
+	.col-md-3 {
+		margin: 10px;
+}
+}

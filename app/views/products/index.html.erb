@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
       <div class="col-md-12">
-    <p id="notice"><%= notice %></p>
-    <h1 class="page-heading">List of Products</h1>
+        <p id="notice"><%= notice %></p>
+        <h1 class="page-heading">List of Products</h1>
   </div>
       <table>
         <thead>
@@ -15,22 +15,43 @@
           </tr>
         </thead>
 
-        <tbody>
-          <% @products.each do |product| %>
-            <tr>
-              <td><%= product.name %></td>
-              <td><%= product.description %></td>
-              <td><%= product.image_url %></td>
-              <td><%= product.colour %></td>
-              <td><%= link_to 'Show', product %></td>
-              <td><%= link_to 'Edit', edit_product_path(product) %></td>
-              <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+  <div class="row product-row grid-header">
+    <div class="col-md-3 col-sm-3">
+      <h4>Name</h4>
+    </div>
+    <div class="col-md-3 col-sm-3">
+      <h4>Description</h4>
+    </div>
+    <div class="col-md-3 col-sm-3">
+      <h4>Image</h4>
+    </div>
+    <div class="col-md-3 col-sm-3">
+      <h4>Colour</h4>
+    </div>
+  </div>
 
-      <br>
+  <% @products.each do |product| %>
+    <div class="row product-row">
+      <div class="col-md-3 col-sm-3">
+        <strong><%= product.name %></strong>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <%= product.description %>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <%= product.image_url %>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <%= product.colour %><br>
+        <%= link_to 'Show', product %>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<br>
 
       <%= link_to 'Add a new product', new_product_path %>
   </div>
