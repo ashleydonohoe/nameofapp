@@ -4,9 +4,8 @@
       <div class="col-md-12">
         <h1 class="page-heading">List of Products</h1>
   </div>
-   <% @products.each do |product| %>
     <%= render @products %>
-  <% end %></div>
+</div>
 
 <br>
       <button class="btn btn-primary"><%= link_to 'Add a new product', new_product_path %></button>
