@@ -2,8 +2,8 @@
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-  	<%= @products.each do |product| %>
-    <li data-target="#carousel-example-generic" class="<%="active" if product == @products.first %>"</li>
+  	<% (0.. @products.length - 1).to_a.each do |index| %>
+    <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
     <% end %>
   </ol>
 
@@ -11,7 +11,7 @@
   <div class="carousel-inner" role="listbox">
   	<% @products.each do |product| %>
     <div class="item<%= " active" if product == @products.first %>">
-      <%= image_tag(product.image_url, class: "center-block") %>
+      <%= image_tag(product.image_url, class:"center-block") %>
       <div class="carousel-caption">
       	<%= product.name %>
       </div>

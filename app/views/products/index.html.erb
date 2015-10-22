@@ -5,21 +5,7 @@
         <h1 class="page-heading">List of Products</h1>
   </div>
   <% @products.each do |product| %>
-    <div class="row product-row">
-      <div class="col-md-6 col-sm-6">
-        <p><strong><%= product.name %></strong></p>
-        <p>Description: <%= product.description %></p>
-        <p>Color: <%= product.colour %>
-        <p>Price: <%= product.price %>
-        <p><%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      </div>
-      <div class="col-md-6 col-sm-6">
-        <p>Picture:</p>
-        <%= product.image_url %>
-      </div>
-    </div>
+    <%= render partial: "product", locals: {product: product} %>
   <% end %>
 </div>
 
