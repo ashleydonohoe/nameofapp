@@ -1,11 +1,4 @@
-<p id="notice"><%= notice %></p>
-<div class="container">
-  <div class="row">
-      <div class="col-md-12">
-        <h1 class="page-heading">List of Products</h1>
-  </div>
-  <% @products.each do |product| %>
-    <div class="row product-row">
+<div class="row product-row">
       <div class="col-md-6 col-sm-6">
         <p><strong><%= product.name %></strong></p>
         <p>Description: <%= product.description %></p>
@@ -20,10 +13,3 @@
         <%= product.image_url %>
       </div>
     </div>
-  <% end %>
-</div>
-
-<br>
-      <button class="btn btn-primary"><%= link_to 'Add a new product', new_product_path %></button>
-  </div>
-</div>
