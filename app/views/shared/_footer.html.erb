@@ -4,19 +4,14 @@
             		<div class="col-md-4 col-sm-4 col-xs-6">
             		<ul class="footer-links">
             			<h4>Site Directory</h4>
-            			<li><a href="/static_pages/coming_soon.html">Computers</a>
-                    	</li>
-                    	<li><a href="/static_pages/coming_soon.html">Tablets</a>
-                    	</li>
-                    	<li><a href="/static_pages/coming_soon.html">Mobile Phones</a>
-                    	</li>
-                    	<li><a href="/static_pages/coming_soon.html">Special Offers</a>
-                    	</li>
-                    	<li><a href="/static_pages/about.html">About Us</a>
-                    	</li>
-                    	<li><a href="/static_pages/contact.html">Contact Us</a>
-                    	</li>
-            		</ul>
+            			<li><%= link_to "View All", products_path %></li>
+                        <li><%= link_to "Special Offers", static_pages_coming_soon_path %>
+                        </li>
+                        <li><%= link_to "About Us", static_pages_about_path %>
+                        </li>
+                        <li><%= link_to "Contact Us", static_pages_contact_path %>
+                        </li>
+            		  </ul>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-6">
                 <ul class="footer-contact">

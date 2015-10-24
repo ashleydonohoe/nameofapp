@@ -3,11 +3,10 @@
   <div class="row">
       <div class="col-md-12">
         <h1 class="page-heading">List of Products</h1>
+        <button class="btn btn-primary center-block"><%= link_to 'Add a new product', new_product_path %></button>
   </div>
     <%= render @products %>
 </div>
 
-<br>
-      <button class="btn btn-primary"><%= link_to 'Add a new product', new_product_path %></button>
   </div>
 </div>
