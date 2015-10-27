@@ -10,7 +10,7 @@
                 <a href="index.html" class="navbar-brand">Gadget Mart</a>
             </div>
             <div class="navbar-collapse collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-left">  
                     <li><%= link_to "View All", products_path %></li>
                     <li><%= link_to "Special Offers", static_pages_coming_soon_path %>
                     </li>
@@ -18,6 +18,16 @@
                     </li>
                     <li><%= link_to "Contact Us", static_pages_contact_path %>
                     </li>
+                </ul>
+                <form class="nav navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <%= form_tag("/products", method: "get") do %>
+                            <%= label_tag(:q, "Search for:") %>
+                            <%= text_field_tag(:q, "", class: "form-control") %>
+                        </div>
+                        <%= submit_tag("Search", class: "btn btn-default") %>
+                    <% end %>
+                    </li> 
                 </ul>
             </div>
             <!-- end navbar collapse -->
