@@ -27,16 +27,14 @@ tbody tr td {
 	margin-bottom: 10px;
 }
 
-@media screen and (min-width: 500px) and (max-width: 768px) {
-	.page-heading {
-		padding-top: 50px;
+@media screen and (max-width: 768px) {
+
+	.navbar-left {
+		padding-left: 30px;
 	}
+
 }
 
-#carousel-example-generic {
-	margin-top: 60px;
-}
-
-.search {
-	padding-top: 13px;
+.search-box {
+	width: 40%;
 }

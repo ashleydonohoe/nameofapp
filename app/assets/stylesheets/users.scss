@@ -1,0 +1,19 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-form {
+	max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.notice {
+	margin-top: 75px;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.alert {
+	margin: 0;
+}

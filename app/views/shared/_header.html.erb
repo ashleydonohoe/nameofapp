@@ -12,18 +12,29 @@
             <div class="navbar-collapse collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-left">  
                     <li><%= link_to "View All", products_path %></li>
-                    <li><%= link_to "Special Offers", static_pages_coming_soon_path %>
+                    <li><%= link_to "Deals", static_pages_coming_soon_path %>
                     </li>
                     <li><%= link_to "About", static_pages_about_path %>
                     </li>
                     <li><%= link_to "Contact", static_pages_contact_path %>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav pull-right">
+                        <% if user_signed_in? %>
+                            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'login') %>
+                            </li>
+                            <li><%= link_to('Manage Account', edit_user_registration_path, class: 'login') %>
+                            </li>
+                        <% else %>
+                            <li><%= link_to('Sign Up', new_user_registration_path) %></li>
+                            <li><%= link_to('Login', new_user_session_path, class: 'login') %></li>
+                        <% end %>
+                </ul>
                 <form class="nav navbar-form navbar-right" role="search">
                         <div class="form-group">
                             <%= form_tag("/products", method: "get") do %>
-                            <%= label_tag(:q, "Search for:") %>
-                            <%= text_field_tag(:q, "", class: "form-control") %>
+                            <%= label_tag(:q, "Search:") %>
+                            <%= text_field_tag(:q, "", :plceholder => "Enter search terms", class: "form-control search-box") %>
                         </div>
                         <%= submit_tag("Search", class: "btn btn-default") %>
                     <% end %>
