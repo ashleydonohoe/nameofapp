@@ -2,7 +2,9 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h1 class="page-heading">Contact Us</h1>
-			<%= flash[:notice] %>
+    	<% if notice %>
+        	<p id="notice" class="alert alert-info"><%= notice %></p>
+    	<% end %>
 
 			<%= form_tag("/static_pages/thank_you") do %>
 			<div class="row">
