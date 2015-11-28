@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
 	load_and_authorize_resource
 
 	def index
+		@orders = Order.where(user_id: current_user_id)
 	end
 
 	def show
