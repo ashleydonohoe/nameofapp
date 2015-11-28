@@ -1,9 +1,8 @@
 class OrdersController < ApplicationController
 	before_filter :authenticate_user!
-	load_and_authorize_resource
 
 	def index
-		@orders = Order.where(user_id: current_user_id)
+		@orders = Order.where(user_id: current_user.id)
 	end
 
 	def show
@@ -14,5 +13,4 @@ class OrdersController < ApplicationController
 
 	def create
 	end
-
 end
