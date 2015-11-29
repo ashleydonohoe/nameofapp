@@ -1,32 +1,17 @@
-<div class="container">
+<div class="container product-display page-heading">
 	<div class="row">
-		<div class="col-md-12">
-			<h1 class="page-heading"><%= @product.name %></h1>
-		</div>
-		<div class="col-md-6 col-sm-6 product-background">
-			<p>
-			  <strong>Name:</strong>
-			  <%= @product.name %>
-			</p>
-
-			<p>
-			  <strong>Description:</strong><br>
-			  <%= @product.description %>
-			</p>
-			<p>
-				<strong>Colour:</strong><br>
-				<%= @product.colour %>
-			</p>
-			<p>
-				<strong>Price:</strong><br>
-				<%= @product.price %>
-			</p>
-		</div>
 		<div class="col-md-6 col-sm-6">
-			<p>
-			  <strong>Image:</strong> <br><!--Want product image to appear to right of name/description on small and larger sized screens-->
-			  <%= @product.image_url %>
-			</p>
+			  <a href="<%= @product.image_url %>">
+			  <img src="<%= @product.image_url %>" alt="<%=@product.name %>" class="thumbnail center-block">
+			</a>
+		</div>
+
+		<div class="col-md-6 col-sm-6">
+			<h2><%= @product.name %></h2>
+			<h5>Color: <%= @product.colour %></h5>
+			<h4>$<%= @product.price %></h4>
+			<p class="italic"><%= @product.description %></p>
+			<p>Customer Rating:</p>
 		</div>
 	</div>
 	<div class="row">
@@ -34,6 +19,11 @@
 			<%= link_to 'Edit', edit_product_path(@product) %> | 
 			<%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' } %> |
 			<%= link_to 'Back', products_path %>
+		</div>
+	</div>
+	<div class="row reviews">
+		<div class="col-md-9">
+			<h4><span class="glyphicon glyphicon-star"></span> <u>Customer Reviews</u> <span class="glyphicon glyphicon-star"></span></h4>
 		</div>
 	</div>
 </div>
