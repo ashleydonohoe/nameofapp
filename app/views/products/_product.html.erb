@@ -9,7 +9,6 @@
         <%= link_to 'Delete', product, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div>
       <div class="col-md-6 col-sm-6">
-        <p>Picture:</p>
-        <%= product.image_url %>
+        <img src="<%= product.image_url %>" alt="<%= product.name %>" class="thumbnail center-block"/>
       </div>
     </div>
