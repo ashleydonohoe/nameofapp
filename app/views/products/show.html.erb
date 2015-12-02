@@ -21,9 +21,14 @@
 			<%= link_to 'Back', products_path %>
 		</div>
 	</div>
+		<div class="row reviews">
+			<div class="col-md-9">
+				<%= render 'new_comment' %>
+			</div>
+		</div>
+
 	<div class="row reviews">
 		<div class="col-md-9">
-			<%= render 'new_comment' %>
 			<h4 class="review-heading"><span class="glyphicon glyphicon-star"></span> <u>Customer Reviews</u> <span class="glyphicon glyphicon-star"></span></h4>
 			<%= render 'comments' %>
 		</div>
