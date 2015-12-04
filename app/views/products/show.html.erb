@@ -31,6 +31,7 @@
 		<div class="col-md-9">
 			<h4 class="review-heading"><span class="glyphicon glyphicon-star"></span> <u>Customer Reviews</u> <span class="glyphicon glyphicon-star"></span></h4>
 			<%= render 'comments' %>
+			<%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
 		</div>
 	</div>
 </div>
