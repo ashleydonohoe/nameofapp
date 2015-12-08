@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      @products = Product.where("name LIKE ?", "%#{search_term}%")
+      @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 10).order("created_at DESC")
     else
       @products = Product.all.paginate(:page => params[:page], :per_page => 10).order("created_at DESC")
     end
