@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :orders
 	after_create :send_welcome
+
 	def send_welcome
-		UserMailer.send_signup_email(self).deliver
+		UserNotifier.send_signup_email(self).deliver
 	end
 end
