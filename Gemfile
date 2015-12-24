@@ -25,6 +25,7 @@ gem 'will_paginate-bootstrap'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "factory_girl_rails", "~> 4.0"
+gem 'spork-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -37,7 +38,8 @@ gem "factory_girl_rails", "~> 4.0"
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
-  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'guard-spork'
 end
 
 group :development do
