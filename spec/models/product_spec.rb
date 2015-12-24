@@ -3,11 +3,11 @@ require 'rails_helper'
 describe Product do
 	context "create a product with a user and several ratings" do
 		before do
-			@product = Product.create!(name: "Apple iPad", description: "This is a tablet from Apple.", image_url: "http://pisces.bbystatic.com/image2/BestBuy_US/images/products/7009/7009597_sd.jpg", colour: "black", price: 499.99)
-			@user = User.create!(email: "testingaddress@gmail.com", password: "notreallysecurepassword")
-			@product.comments.create!(rating: 1, user: @user, body: "Horrible tablet!" )
-			@product.comments.create!(rating: 3, user: @user, body: "Meh, it's OK")
-			@product.comments.create!(rating: 5, user: @user, body: "Amazing tablet!")
+			@product = create(:product)
+			firstcomment = create(:comment, product: @product, rating: 1 )
+			secondcomment = create(:comment, product: @product, rating: 3 )
+			thirdcomment = create(:comment, product: @product, rating: 5 )
+
 		end
 
 		it "returns the average rating of all comments" do
@@ -18,7 +18,7 @@ describe Product do
 	# Validation tests
 	context "when product has no name" do
       before do
-        @product = Product.create(description: "This is a tablet from Apple.")
+        @product = Product.create(description: "Gadget", image_url: "http://pisces.bbystatic.com/image2/BestBuy_US/images/products/7009/7009597_sd.jpg", colour: "black", price: 499.99)
       end
 
       it 'is not valid' do
@@ -28,8 +28,8 @@ describe Product do
 
     context "when comment has no body" do
     	before do 
-    		@product = Product.create!(name: "Apple iPad", description: "This is a tablet from Apple.", image_url: "http://pisces.bbystatic.com/image2/BestBuy_US/images/products/7009/7009597_sd.jpg", colour: "black", price: 499.99)
-			@user = User.create!(email: "testingaddress@gmail.com", password: "notreallysecurepassword")
+    		@product = create(:product)
+			@user = build(:user)
 			@product.comments.create(rating: 5, user: @user, body: "Amazing tablet!")
 			@product.comments.create(rating: 3, user: @user)		
 		end
