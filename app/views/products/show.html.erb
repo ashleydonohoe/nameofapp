@@ -9,7 +9,7 @@
 		<div class="col-md-6 col-sm-6">
 			<h2><%= @product.name %></h2>
 			<h5>Color: <%= @product.colour %></h5>
-			<h4>$<%= @product.price %></h4>
+			<h4>$<%= sprintf "%.2f", @product.price %></h4>
 			<p class="italic"><%= @product.description %></p>
 			<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
 			<%= form_tag "/payments/create" do %>
