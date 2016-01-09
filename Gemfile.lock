@@ -41,6 +41,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
+    byebug (8.0.1)
     cancancan (1.13.1)
     childprocess (0.5.8)
       ffi (~> 1.0, >= 1.0.11)
@@ -252,6 +253,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   cancancan
   coffee-rails (~> 4.1.0)
   devise
