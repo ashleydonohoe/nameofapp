@@ -18,7 +18,7 @@ describe Product do
 	# Validation tests
 	context "when product has no name" do
       before do
-        @product = Product.create(description: "Gadget", image_url: "http://pisces.bbystatic.com/image2/BestBuy_US/images/products/7009/7009597_sd.jpg", colour: "black", price: 499.99)
+        @product = build(:product, name: "")
       end
 
       it 'is not valid' do
