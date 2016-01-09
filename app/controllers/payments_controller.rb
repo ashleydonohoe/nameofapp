@@ -16,8 +16,9 @@ class PaymentsController < ApplicationController
 
 			if charge.paid
 				Order.create(:product_id => @product.id, :user_id => @user, :total => @product.price)
+				UserMailer.confirmation(@user.deliver_now
 			end
-			
+
 		rescue Stripe::CardError => e
 			# The card was declined
 			body = e.json_body
