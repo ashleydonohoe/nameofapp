@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   has_many :orders
   after_create :send_welcome
 
+
+
   def send_welcome
     UserMailer.welcome_email(self).deliver
   end
