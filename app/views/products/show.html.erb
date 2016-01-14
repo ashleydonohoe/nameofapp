@@ -8,6 +8,7 @@
 
 		<div class="col-md-6 col-sm-6">
 			<h2><%= @product.name %></h2>
+			<% logger.debug "Product: #{@product.name}"%> 
 			<h5>Color: <%= @product.colour %></h5>
 			<h4>$<%= sprintf "%.2f", @product.price %></h4>
 			<p class="italic"><%= @product.description %></p>
