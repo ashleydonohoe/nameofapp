@@ -1,9 +1,7 @@
 <div class="container product-display page-heading">
 	<div class="row">
 		<div class="col-md-6 col-sm-6">
-			  <a href="<%= @product.image_url %>">
-			  <img src="<%= @product.image_url %>" alt="<%=@product.name %>" class="thumbnail center-block">
-			</a>
+			<%= image_tag(@product.image_url, class: "center-block thumbnail img-zoom", data_zoom_image: @product.image_url) %>
 		</div>
 
 		<div class="col-md-6 col-sm-6">

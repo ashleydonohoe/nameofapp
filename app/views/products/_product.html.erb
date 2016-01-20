@@ -3,7 +3,7 @@
         <p><strong><%= product.name %></strong></p>
         <p>Description: <%= product.description %></p>
         <p>Color: <%= product.colour %>
-        <p>Price: $<%= (product.price * 100).to_i %>
+        <h4>$<%= sprintf "%.2f", product.price %></h4>
         <p><%= link_to 'Product Details', product, class: "btn btn-primary" %><br>
         <%= link_to 'Edit', edit_product_path(product), class: "btn btn-info" %>
         <%= link_to 'Delete', product, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></p>
