@@ -1,7 +1,26 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<h1 class="page-heading">List of Orders</h1>
-		</div>
-	</div>
+<div class="container page-heading" ng-controller="OrdersCtrl">
+	<h1>Orders</h1>
+
+	<form class="form-inline" ng-submit="addOrder()">
+		<strong>Add Order: </strong>
+		<input type="number" value="{{orders[orders.length - 1].id + 1}}" disabled>
+		<input type="number" step="0.01" class="form-control" placeholder="Total">
+		<input type="number" class="form-control">
+		<input type="submit" value="+" class="btn btn-success">
+	</form>
+
+	<table class="table table-hover">
+		<thead>
+			<td>Order ID</td>
+			<td>Total</td>
+			<td>Product</td>
+			<td></td>
+		</thead>
+		<tr ng-repeat="order in orders | orderBy: '-id':reverse">
+			<td>{{order.id}}<small ng-show="order.id"><br>-{{order.user_id}}</small></td>
+			<td><strong>{{order.total | currency}}</strong></td>
+			<td>{{order.product_id}}</td>
+			<td></td>
+		</tr>
+	</table>
 </div>
