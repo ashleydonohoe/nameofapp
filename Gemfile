@@ -22,6 +22,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'angularjs-rails'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "factory_girl_rails", "~> 4.0"
