@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  respond_to :json, :html
 
   # GET /products
   # GET /products.json
@@ -11,6 +12,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.all.paginate(:page => params[:page], :per_page => 10).order("created_at DESC")
     end
+    respond_with @products
   end
 
   # GET /products/1
