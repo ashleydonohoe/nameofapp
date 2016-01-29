@@ -1,3 +1,4 @@
+<% cache product do %>
 <div class="row product-row">
       <div class="col-md-6 col-sm-6">
         <p><strong><%= product.name %></strong></p>
@@ -12,3 +13,4 @@
         <img src="<%= product.image_url %>" alt="<%= product.name %>" class="thumbnail center-block"/>
       </div>
     </div>
+    <% end %>

@@ -5,7 +5,9 @@
         <h1 class="page-heading">List of Products</h1>
         <button class="btn btn-primary center-block"><%= link_to 'Add a new product', new_product_path %></button>
   </div>
+  <% cache(cache_key_for_products) do %>
     <%= render @products %>
+  <% end %>
     <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
 </div>
 

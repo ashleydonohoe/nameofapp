@@ -1,5 +1,6 @@
 <div class="container product-display page-heading">
 	<div class="row">
+		<% cache @product do %>
 		<div class="col-md-6 col-sm-6">
 			<%= image_tag(@product.image_url, class: "center-block thumbnail img-zoom", data_zoom_image: @product.image_url) %>
 		</div>
@@ -10,6 +11,7 @@
 			<h5>Color: <%= @product.colour %></h5>
 			<h4>$<%= sprintf "%.2f", @product.price %></h4>
 			<p class="italic"><%= @product.description %></p>
+			<% end %>
 			<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
 			<%= form_tag "/payments/create" do %>
 			<%= hidden_field_tag(:product_id, @product.id) %>
