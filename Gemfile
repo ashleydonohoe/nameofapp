@@ -32,6 +32,7 @@ gem 'byebug'
 gem 'brakeman'
 gem 'dalli'
 gem 'redis-rails'
+gem 'newrelic_rpm'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
